@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Name – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Your Name – Web developer, problem solver, and builder." />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --card: #020617;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1e293b, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .tagline {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      max-width: 34rem;
+      margin: 0.5rem auto 0;
+      font-size: 0.95rem;
+    }
+
+    .pill-row {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      justify-content: center;
+    }
+
+    .pill {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 0.35rem 0.9rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      max-width: 38rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 720px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      background: radial-gradient(circle at top left, #1f2937, var(--card));
+      border-radius: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      padding: 1.25rem 1.3rem;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.8);
+    }
+
+    .card h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+    }
+
+    .card-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.65rem;
+    }
+
+    .card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .list-inline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0;
+      margin: 0.75rem 0 0;
+      list-style: none;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .list-inline li::before {
+      content: "• ";
+      opacity: 0.6;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: linear-gradient(135deg, #0ea5e9, #22c55e);
+      color: #0b1120;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      box-shadow: 0 12px 35px rgba(34, 211, 238, 0.35);
+    }
+
+    .btn:hover {
+      filter: brightness(1.04);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 2rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <div class="tagline">Portfolio</div>
+      <h1>Your Name</h1>
+      <p class="subtitle">
+        Web developer focused on building clean, fast, and maintainable interfaces.
+        I enjoy turning tricky problems into simple, reliable solutions.
+      </p>
+      <div class="pill-row">
+        <span class="pill">JavaScript / TypeScript</span>
+        <span class="pill">Svelte / React</span>
+        <span class="pill">Node / APIs</span>
+        <span class="pill">UX-focused</span>
+      </div>
+    </header>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <p class="section-subtitle">A few things I’ve built or contributed to recently.</p>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Project One</h3>
+          <div class="card-meta">Single-page app · 2025</div>
+          <p>
+            Short description of what this does, who it’s for, and what you were responsible for.
+            Mention performance, UX, or interesting technical bits.
+          </p>
+          <ul class="list-inline">
+            <li>SvelteKit</li>
+            <li>Node API</li>
+            <li>PostgreSQL</li>
+          </ul>
+          <p>
+            <a href="https://your-project-link.com" target="_blank" rel="noopener noreferrer">View live site →</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Project Two</h3>
+          <div class="card-meta">Internal tool · 2024</div>
+          <p>
+            Another project summary. Focus on impact: time saved, errors reduced, or process improved.
+          </p>
+          <ul class="list-inline">
+            <li>React</li>
+            <li>REST API</li>
+            <li>Automation</li>
+          </ul>
+          <p>
+            <a href="https://github.com/yourusername/your-repo" target="_blank" rel="noopener noreferrer">
+              View code on GitHub →
+            </a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p class="section-subtitle">
+        A short paragraph about how you work, what you care about, and what kinds of problems you like solving.
+      </p>
+      <p>
+        You can mention years of experience, industries you’ve worked in, and a sentence on how you
+        collaborate with designers, backend devs, business stakeholders, etc.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact">
+        <a class="btn" href="mailto:you@example.com">Email me</a>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Your Name. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
